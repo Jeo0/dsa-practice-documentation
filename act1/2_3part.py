@@ -29,7 +29,7 @@ class Linkedlist:
         """
 
         # loop until it reaches the last node
-        while previous.tail == None:
+        while previous.tail != None:
             #print("i passed here")
             previous.tail = new_node
             #pogi1.tail = pogi2      # set previous tail to current address
@@ -39,6 +39,8 @@ class Linkedlist:
             new_node.head = previous
             #pogi2.head = pogi1      # set address to previous 
             #print("pogi2.head", pogi2.head)         # head : 000        address: 123    tail: none
+
+            self.own.
 
         # add new node
 
