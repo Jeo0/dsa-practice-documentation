@@ -72,5 +72,5 @@ def search_letter(listlist, letter = None):
     print("not found")
     return None
 
-testsearch = search_letter(letters, 'f')
+testsearch = search_letter(letters, 'a')
 print(testsearch)

@@ -25,7 +25,9 @@ my_list = [12, 4, 56, 17, 8, 99, 23]
 
 
 ###############################################
-# sorting
+################ sorting ######################
+###############################################
+# i dont want to be complacent
 # we ned to lern sorting algos
 # this is my trial in implementing bubble sort without copying
 
@@ -52,8 +54,10 @@ print("sort asc:\t", sort_list)
 # sort_list = my_list.sort()
 
 
+
 ###############################################
-# reversing
+############## reversing ######################
+###############################################
 # same thing happens however reversed
 # leme just copy paste it from the above
 # create a copy without using python's inehrent EZPZ features
@@ -78,9 +82,11 @@ print("reverse:\t", reverse_list)
 # reverse_list = sort_list.reverse()
 
 
+
+
 ###############################################
-# slicing
-# i dont want to use python jejeje
+################ slicing ######################
+###############################################
 starting_index = 1
 last_index     = 4
 
