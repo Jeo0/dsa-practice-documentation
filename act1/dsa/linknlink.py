@@ -55,11 +55,13 @@ class Linkedlist:
         self.newnode = Node(value, tail)
 """
 
+
 class Node:
     def __init__(self, value=None):
         self.value = value
         self.next = None
         self.previous = None
+
 
 class Linkedlist:
     def __init__(self, *values):
@@ -67,27 +69,25 @@ class Linkedlist:
         self.initializer(*values)
         self.tail = None
 
-
     def add(self, value):
         """
-        param:  value   
+        param:  value
 
         appends only an element to the end
         returns void
         """
-        new_node = Node(value)      # initialize the value first with a new node
-        current = self.head         # makes the context that
-                                    # we are handling the current node
-                                    # while also initialize the next node regardless
+        new_node = Node(value)  # initialize the value first with a new node
+        current = self.head  # makes the context that
+        # we are handling the current node
+        # while also initialize the next node regardless
 
         while current.next is not None:
             current = current.next
         while current.previous is not None:
             current = current.previous
 
-
         current.previous = current  # point to self
-        current.next = new_node     # shift context to right
+        current.next = new_node  # shift context to right
 
     def printlist(self):
         """
@@ -101,12 +101,11 @@ class Linkedlist:
         while current_node.next is not None:
             current_node = current_node.next
             tempCache.append(current_node.value)
-        print(tempCache) 
+        print(tempCache)
 
-        
     def deleteThis(self, index):
         """
-        param:  index   
+        param:  index
 
         deletes the index specified
         returns void
@@ -115,16 +114,16 @@ class Linkedlist:
 
         # go to the node
         current_index = 0
-        last_node = current_node                # set to self node
-        while current_index-1 != index:
+        last_node = current_node  # set to self node
+        while current_index - 1 != index:
             last_node = current_node
             current_node = current_node.next
-            current_index +=1
-            #print("im lastly at curreeeentindex of ", current_index)
+            current_index += 1
+            # print("im lastly at curreeeentindex of ", current_index)
             print("last_node.value:\t", last_node.value)
             print("current_node.value:\t", current_node.value)
             print()
-            
+
         print(":::::::::finish:::::::::::::")
         # after arriving here, delete
         print("\n===========\nbefore:")
@@ -141,11 +140,9 @@ class Linkedlist:
         print("current_node.value:\t", current_node.value)
         print()
 
-
-
-
-
-
+    def deleteLastElement(self):
+        current_node = self.head
+        # current_index =
 
     def initializer(self, *values):
         """
@@ -158,30 +155,19 @@ class Linkedlist:
                 self.add(iii)
 
 
-
-
-
-
-
-
-
-
-
 # operations
-pogi = Linkedlist(123,345,456)
+pogi = Linkedlist(123, 345, 456, 25,346,214,456,32,56754,645,75,68,6786785,67875675,635,54685678,546346,468567,4543,3474,5745)
 pogi.printlist()
 
 # add multiple, then print
-buffers = [909,123]
+buffers = [909, 123]
 for bbb in buffers:
     pogi.add(bbb)
 pogi.printlist()
 
-
 # deletion
-#pogi.deleteThis(2)
-#pogi.deleteThis(0)
+# pogi.deleteThis(2)
+# pogi.deleteThis(0)
 pogi.deleteThis(3)
 pogi.printlist()
-
 
